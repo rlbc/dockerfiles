@@ -1,6 +1,8 @@
 # dockerfiles
 
-This repo contains the main Dockerfiles which I use regularly in bioinformatics analysis. Feel free to use these docker images and if you have any questions message me at rafael.coan@unesp.br.
+This repo contains the main Dockerfiles which I use regularly in bioinformatics analysis. Images are available at [Docker Hub](https://hub.docker.com/u/rcoan).
+
+Feel free to use these docker images and if you have any questions message me at rafael.coan@unesp.br.
 
 Here is a brief description of all current software.
 
@@ -17,6 +19,8 @@ This image contains software for RNA sequencing (RNA-Seq) analysis. It's based o
 - IHW
 - vsn
 - rjson
+
+<u>Docker Pull Command:</u> `docker pull rcoan/tidyverse-deseq2`
 
 ### Usage
 
@@ -36,9 +40,13 @@ user/password: rstudio/rstudio
 
 PLEK 1.2 for lncRNA discovery.
 
+<u>Docker Pull Command:</u> `docker pull rcoan/plek`
+
 ## FEELnc
 
 [FEELnc](https://github.com/tderrien/FEELnc) is a program to identify and classify new lncRNA. It is fast and accurate. This image is based on version 0.1.1 - [Paper](http://nar.oxfordjournals.org/content/early/2017/01/03/nar.gkw1306.full).
+
+<u>Docker Pull Command:</u> `docker pull rcoan/feelnc`
 
 ### Usage
 
@@ -57,6 +65,8 @@ The above commands mount your current directory to the container.
 ## WGCNA
 
 This image contains the [WGCNA](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html) Bioconductor package for co-expression network construction. It is based on tidyverse 3.6 and no extra packages.
+
+<u>Docker Pull Command:</u> `docker pull rcoan/wgcna`
 
 ### Usage
 
