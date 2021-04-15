@@ -7,9 +7,10 @@ LABEL maintainer="Rafael Coan (rafael.coan@unesp.br)" \
 RUN apt-get update && apt-get install -y tk libbz2-dev liblzma-dev
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN R -e "install.packages(c('BiocManager', 'tools', 'dendextend')); BiocManager::install(c('rhdf5', 'preprocessCore', 'sva', 'vioplot', 'GenomicFeatures', 'DESeq2', 'tximport', 'pheatmap', 'vsn', 'RColorBrewer'))"
+#RUN R -e "install.packages(c('BiocManager', 'tools', 'dendextend')); BiocManager::install(c('rhdf5', 'sva', 'vioplot', 'GenomicFeatures', 'DESeq2', 'tximport', 'pheatmap', 'vsn', 'RColorBrewer'))"
+RUN R -e "BiocManager::install('preprocessCore', configure.args='--disable-threading')"
 
-#GenomicFeatures não foi instalado
+#GenomicFeatures não foi instalado - ok
 
 #cram/cram_io.c:57:10: fatal error: bzlib.h: No such file or directory
 #https://github.com/samtools/samtools/issues/692
